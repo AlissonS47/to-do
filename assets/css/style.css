@@ -3,3 +3,130 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70rem);
+    height: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex--jc {
+    justify-content: center;
+}
+
+.flex--jsb {
+    justify-content: space-between;
+}
+
+.flex--ac {
+    align-items: center;
+}
+
+.flex--g1 {
+    gap: 1rem;
+}
+
+body {
+    background-color: rgb(25, 24, 41);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 15rem;
+    background-image: linear-gradient(90deg, rgba(12, 32, 148, 0.7), rgb(242, 69, 238, 0.7)), url("../img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.todo {
+    width: 100%;
+    max-width: 30rem;
+    transform: translateY(-50%);
+}
+
+.todo h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.todo__input {
+    position: relative;
+    background-color: rgb(48, 48, 68);
+    padding: 1rem;
+    margin-bottom: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+}
+
+.todo__input input {
+    background: none;
+    border: none;
+    border-bottom: 0.1rem solid rgb(216, 216, 216);
+    outline: none;
+    color: rgb(216, 216, 216);
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.todo__input button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.todo__content {
+    background-color: rgb(48, 48, 68);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+
+.todo__list ul {
+    list-style: none;
+}
+
+.todo__list li {
+    padding: 0.5em 1em;
+    border-bottom: 0.1rem solid rgba(216, 216, 216, 0.1);
+    font-size: 1rem;
+    color: rgb(202, 202, 202);
+    cursor: move;
+}
+
+.todo__list li:hover {
+    background-color: rgb(41, 41, 58);
+}
+
+.todo__list input {
+    margin-right: 0.5em;
+}
+
+.todo__list input:checked + label {
+    color: rgba(202, 202, 202, 0.3);
+    text-decoration: line-through;
+}
+
+.todo__footer {
+    padding: 0.8em 1em;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(202, 202, 202, 0.5);
+}
+
+.todo__footer button {
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.todo__actions .active {
+    color: rgb(78, 78, 240);
+}

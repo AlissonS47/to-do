@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/main.js" defer></script>
     <title>To do</title>
@@ -11,42 +14,39 @@
 <body>
     <header></header>
     <main>
-        <div class="container">
+        <div class="container flex-row flex--jc">
             <div class="todo">
                 <h1>To do</h1>
+                <div class="todo__input">
+                    <input type="text" placeholder="Create a new todo...">
+                </div>
                 <div class="todo__content">
-                    <div class="todo__input">
-                        <input type="text" placeholder="Create a new todo...">
-                        <button>Add</button>
-                    </div>
                     <div class="todo__list">
                         <ul>
                             <li>
                                 <input type="checkbox">
-                                <span>Do thing 1</span>
+                                <label>
+                                    Do thing 1
+                                </label>
                             </li>
                             <li>
                                 <input type="checkbox">
-                                <span>Do thing 2</span>
+                                <label>
+                                    Do thing 2
+                                </label>
                             </li>
                             <li>
                                 <input type="checkbox">
-                                <span>Do thing 3</span>
-                            </li>
-                            <li>
-                                <input type="checkbox">
-                                <span>Do thing 4</span>
-                            </li>
-                            <li>
-                                <input type="checkbox">
-                                <span>Do thing 5</span>
+                                <label>
+                                    Do thing 3
+                                </label>
                             </li>
                         </ul>
                     </div>
-                    <div class="todo__footer">
+                    <div class="todo__footer flex-row flex--jsb flex--ac">
                         <p>5 items left</p>
-                        <div class="todo__actions">
-                            <button type="button">All</button>
+                        <div class="todo__actions flex-row flex--ac flex--g1">
+                            <button class="active" type="button">All</button>
                             <button type="button">Active</button>
                             <button type="button">Completed</button>
                         </div>
