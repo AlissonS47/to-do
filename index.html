@@ -18,39 +18,20 @@
             <div class="todo">
                 <h1>To do</h1>
                 <div class="todo__input">
-                    <input type="text" placeholder="Create a new todo...">
+                    <input class="js-todo-input" type="text" placeholder="Create a new todo...">
                 </div>
                 <div class="todo__content">
                     <div class="todo__list">
-                        <ul>
-                            <li>
-                                <input type="checkbox">
-                                <label>
-                                    Do thing 1
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox">
-                                <label>
-                                    Do thing 2
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox">
-                                <label>
-                                    Do thing 3
-                                </label>
-                            </li>
-                        </ul>
+                        <ul class="js-list"></ul>
                     </div>
-                    <div class="todo__footer flex-row flex--jsb flex--ac">
-                        <p>5 items left</p>
-                        <div class="todo__actions flex-row flex--ac flex--g1">
-                            <button class="active" type="button">All</button>
-                            <button type="button">Active</button>
-                            <button type="button">Completed</button>
+                    <div class="js-list-actions todo__footer flex-row flex--jsb flex--ac">
+                        <p><span class="js-items-left">0</span> items left</p>
+                        <div class="js-list-filters todo__actions flex-row flex--ac flex--g1">
+                            <button class="js-task-filter-all active" type="button">All</button>
+                            <button class="js-task-filter-active" type="button">Active</button>
+                            <button class="js-task-filter-completed" type="button">Completed</button>
                         </div>
-                        <button type="button">Clear Completed</button>
+                        <button class="js-task-clear-completed" type="button">Clear Completed</button>
                     </div>
                 </div>
             </div>

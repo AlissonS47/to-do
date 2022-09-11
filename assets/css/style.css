@@ -45,9 +45,10 @@ header {
 }
 
 .todo {
+    position: absolute;
+    top: 5rem;
     width: 100%;
     max-width: 30rem;
-    transform: translateY(-50%);
 }
 
 .todo h1 {
@@ -92,24 +93,66 @@ header {
 }
 
 .todo__list li {
+    display: flex;
+    gap: 1rem;
+    position: relative;
     padding: 0.5em 1em;
     border-bottom: 0.1rem solid rgba(216, 216, 216, 0.1);
     font-size: 1rem;
     color: rgb(202, 202, 202);
-    cursor: move;
 }
 
 .todo__list li:hover {
     background-color: rgb(41, 41, 58);
 }
 
-.todo__list input {
-    margin-right: 0.5em;
+.todo__list .hide {
+    display: none;
 }
 
-.todo__list input:checked + label {
-    color: rgba(202, 202, 202, 0.3);
+.todo__list input {
+    width: 100%;
+    font-size: 1.25rem;
+    color: rgb(230, 230, 230);
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.todo__list .editable {
+    cursor: text;
+    border-bottom: 0.1rem solid rgb(216, 216, 216);
+}
+
+.todo__list .completed input {
+    color: rgba(230, 230, 230, 0.5);
     text-decoration: line-through;
+}
+
+.todo__list .hide-task {
+    display: none;
+}
+
+.todo__task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo__task-actions button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    background: linear-gradient(rgba(12, 32, 148), rgb(242, 69, 238));
+}
+
+.todo__task-actions svg {
+    width: 1rem;
+    stroke: #fff;
 }
 
 .todo__footer {
