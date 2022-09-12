@@ -16,22 +16,25 @@
     <main>
         <div class="container flex-row flex--jc">
             <div class="todo">
-                <h1>To do</h1>
+                <div class="todo-title">
+                    <h1>To do</h1>
+                    <span class="js-items-left">0</span>
+                </div>
                 <div class="todo__input">
                     <input class="js-todo-input" type="text" placeholder="Create a new todo...">
-                </div>
-                <div class="todo__content">
-                    <div class="todo__list">
-                        <ul class="js-list"></ul>
-                    </div>
-                    <div class="js-list-actions todo__footer flex-row flex--jsb flex--ac">
-                        <p><span class="js-items-left">0</span> items left</p>
+                    <div class="js-list-actions todo__footer flex-row flex--g1">
                         <div class="js-list-filters todo__actions flex-row flex--ac flex--g1">
                             <button class="js-task-filter-all active" type="button">All</button>
                             <button class="js-task-filter-active" type="button">Active</button>
                             <button class="js-task-filter-completed" type="button">Completed</button>
                         </div>
+                        <span>|</span>
                         <button class="js-task-clear-completed" type="button">Clear Completed</button>
+                    </div>
+                </div>
+                <div class="todo__content">
+                    <div class="todo__list">
+                        <ul class="js-list"></ul>
                     </div>
                 </div>
             </div>

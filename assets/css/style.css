@@ -45,13 +45,18 @@ header {
 }
 
 .todo {
-    position: absolute;
     top: 5rem;
     width: 100%;
     max-width: 30rem;
+    transform: translateY(-180px);
 }
 
-.todo h1 {
+.todo-title {
+    display: inline-block;
+    position: relative;
+}
+
+.todo-title h1 {
     margin-bottom: 0.5em;
     font-size: 2.5rem;
     font-weight: 700;
@@ -59,10 +64,25 @@ header {
     color: #fff;
 }
 
+.todo-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(48, 48, 68);
+    transform: translate(75%);
+}
+
 .todo__input {
     position: relative;
     background-color: rgb(48, 48, 68);
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     margin-bottom: 1em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
 }
@@ -75,12 +95,6 @@ header {
     color: rgb(216, 216, 216);
     font-size: 1.25rem;
     width: 100%;
-}
-
-.todo__input button {
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .todo__content {
@@ -156,6 +170,9 @@ header {
 }
 
 .todo__footer {
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 0.8em 1em;
     font-size: 0.8rem;
     font-weight: 300;

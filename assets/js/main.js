@@ -76,11 +76,13 @@ class ToDo {
     constructor(element, taskCount){
         this.element = this.#elementEvent(element);
         this.taskCount = taskCount;
+        this.#getData();
     }
 
     createTask(task, status){
         this.#addTask(task, status);
         this.itemsLeft();
+        this.#saveData();
     }
 
     itemsLeft(){
@@ -149,6 +151,7 @@ class ToDo {
         task.classList.toggle("completed");
         task.dataset.completed = task.dataset.completed == "true" ? "false" : "true";
         this.itemsLeft();
+        this.#saveData();
     }
     
     #taskEdit(task){
@@ -162,11 +165,39 @@ class ToDo {
             input.setAttribute("readonly", "");
         }
         input.classList.toggle("editable");
+        this.#saveData();
     }
     
     #taskDelete(task){
         task.remove();
         this.itemsLeft();
+        this.#saveData();
+    }
+
+    #saveData(){
+        const data = [];
+        const tasks = this.element.querySelectorAll("li");
+        tasks.forEach(task => {
+            const value = task.querySelector("input").value;
+            data.push({value: value, status: task.dataset.completed});
+        });
+        localStorage.setItem("todo", JSON.stringify(data));
+    }
+
+    #getData(){
+        const data = JSON.parse(localStorage.getItem("todo"));
+        this.#addTasksFromStorage(data);
+    }
+
+    #addTasksFromStorage(tasks){
+        if(tasks == null) return;
+        tasks.forEach(task => {
+            this.createTask(task.value, task.status);
+            if(task.status == "true"){
+                const li = this.element.lastElementChild;
+                li.classList.add("completed");
+            }
+        });
     }
 }
 
