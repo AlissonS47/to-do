@@ -155,8 +155,8 @@ class ToDo {
     }
     
     #taskEdit(task){
-        this.#taskComplete(task);
         const input = task.querySelector(".js-task-input");
+        if(task.dataset.completed == "true") this.#taskComplete(task);
         if(input.hasAttribute("readonly")){
             input.removeAttribute("readonly");
             input.setSelectionRange(input.value.length, input.value.length);
