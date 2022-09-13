@@ -169,7 +169,7 @@ header {
     stroke: #fff;
 }
 
-.todo__footer {
+.todo__buttons {
     position: absolute;
     top: 0;
     right: 0;
@@ -179,7 +179,7 @@ header {
     color: rgba(202, 202, 202, 0.5);
 }
 
-.todo__footer button {
+.todo__buttons button {
     background: none;
     border: none;
     outline: none;
